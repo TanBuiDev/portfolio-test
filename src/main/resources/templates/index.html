@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="vi" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Bùi Lê Hoàng Tấn | Fullstack Developer</title>
+    <meta name="description" content="Portfolio của Bùi Lê Hoàng Tấn - Fullstack Developer kết hợp Web truyền thống và AI Engineering"/>
+    <meta name="keywords" content="Bùi Lê Hoàng Tấn, Fullstack Developer, Spring Boot, ReactJS, AI, Portfolio"/>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet"/>
+
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web@2.0.3"></script>
+
+    <link rel="stylesheet" th:href="@{/css/style.css}"/>
+</head>
+<body>
+    <!-- ==================== NAVIGATION ==================== -->
+    <nav id="navbar" class="navbar">
+        <div class="nav-container">
+            <a href="#hero" class="nav-logo">
+                <span class="logo-bracket">&lt;</span>Tấn<span class="logo-dot">.</span>Dev<span class="logo-bracket">/&gt;</span>
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+                <span class="hamburger"></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ==================== HERO SECTION ==================== -->
+    <section id="hero" class="hero">
+        <div class="hero-bg-grid"></div>
+        <div class="hero-glow hero-glow-1"></div>
+        <div class="hero-glow hero-glow-2"></div>
+        <div class="container">
+            <div class="hero-content fade-in">
+                <div class="hero-badge">
+                    <span class="badge-dot"></span>
+                    Available for Internship &amp; Collaboration
+                </div>
+                <h1 class="hero-title">
+                    Hi, I'm <span class="gradient-text">Bùi Lê Hoàng Tấn</span>
+                </h1>
+                <p class="hero-subtitle">
+                    <span class="typewriter" id="typewriter"></span><span class="cursor">|</span>
+                </p>
+                <p class="hero-description">
+                    Kết hợp sức mạnh của <strong>Web Development</strong> truyền thống với trí tuệ của <strong>AI</strong>
+                    để tạo ra những sản phẩm thông minh, hiện đại và đầy cảm hứng.
+                </p>
+                <div class="hero-actions">
+                    <a href="#projects" class="btn btn-primary">
+                        <i class="ph ph-rocket-launch"></i>
+                        Xem dự án
+                    </a>
+                    <a href="#contact" class="btn btn-outline">
+                        <i class="ph ph-envelope-simple"></i>
+                        Liên hệ
+                    </a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="2">0</span><span class="stat-plus">+</span>
+                        <span class="stat-label">Projects</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="5">0</span><span class="stat-plus">+</span>
+                        <span class="stat-label">Technologies</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="1000">0</span><span class="stat-plus">+</span>
+                        <span class="stat-label">Lines of Code</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-mouse">
+                <div class="scroll-wheel"></div>
+            </div>
+            <span>Scroll down</span>
+        </div>
+    </section>
+
+    <!-- ==================== ABOUT SECTION ==================== -->
+    <section id="about" class="section about">
+        <div class="container">
+            <div class="section-header fade-in">
+                <span class="section-tag">&lt;About /&gt;</span>
+                <h2 class="section-title">Về bản thân</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="about-grid fade-in">
+                <div class="about-card about-intro">
+                    <div class="about-icon-wrap">
+                        <i class="ph ph-user-circle"></i>
+                    </div>
+                    <h3>Who I Am</h3>
+                    <p>
+                        Tôi là <strong>Bùi Lê Hoàng Tấn</strong>, sinh viên ngành Công nghệ Thông tin tại <strong>HUTECH</strong>.
+                        Đam mê lập trình từ những dòng code đầu tiên, tôi luôn tìm cách giải quyết các bài toán thực tế
+                        bằng công nghệ.
+                    </p>
+                </div>
+                <div class="about-card about-passion">
+                    <div class="about-icon-wrap">
+                        <i class="ph ph-lightning"></i>
+                    </div>
+                    <h3>What Drives Me</h3>
+                    <p>
+                        Tôi tin rằng AI không thay thế lập trình viên — nó <strong>trao quyền</strong> cho chúng ta. Tôi tập trung vào việc
+                        xây dựng những ứng dụng web thông minh, nơi con người và AI cộng tác để tạo ra trải nghiệm vượt trội.
+                    </p>
+                </div>
+                <div class="about-card about-goal">
+                    <div class="about-icon-wrap">
+                        <i class="ph ph-target"></i>
+                    </div>
+                    <h3>My Goal</h3>
+                    <p>
+                        Hướng tới vị trí <strong>Fullstack Developer</strong> với chuyên sâu <strong>Backend &amp; AI Engineering</strong>.
+                        Mong muốn gia nhập đội ngũ nơi tôi có thể học hỏi, đóng góp và phát triển cùng sản phẩm thực tế.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== SKILLS SECTION ==================== -->
+    <section id="skills" class="section skills">
+        <div class="container">
+            <div class="section-header fade-in">
+                <span class="section-tag">&lt;Skills /&gt;</span>
+                <h2 class="section-title">Kỹ năng</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="skills-grid fade-in">
+                <!-- Languages -->
+                <div class="skill-category">
+                    <h3 class="skill-category-title">
+                        <i class="ph ph-code"></i> Languages
+                    </h3>
+                    <div class="skill-badges">
+                        <div class="skill-badge">
+                            <div class="skill-badge-icon" style="--badge-color: #3776AB;">
+                                <i class="ph ph-file-py"></i>
+                            </div>
+                            <span>Python</span>
+                        </div>
+                        <div class="skill-badge">
+                            <div class="skill-badge-icon" style="--badge-color: #F7DF1E;">
+                                <i class="ph ph-file-js"></i>
+                            </div>
+                            <span>JavaScript</span>
+                        </div>
+                        <div class="skill-badge">
+                            <div class="skill-badge-icon" style="--badge-color: #E34F26;">
+                                <i class="ph ph-file-html"></i>
+                            </div>
+                            <span>HTML/CSS</span>
+                        </div>
+                        <div class="skill-badge">
+                            <div class="skill-badge-icon" style="--badge-color: #336791;">
+                                <i class="ph ph-database"></i>
+                            </div>
+                            <span>SQL</span>
+                        </div>
+                        <div class="skill-badge">
+                            <div class="skill-badge-icon" style="--badge-color: #b07219;">
+                                <i class="ph ph-file-code"></i>
+                            </div>
+                            <span>Java</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Frameworks -->
+                <div class="skill-category">
+                    <h3 class="skill-category-title">
+                        <i class="ph ph-stack"></i> Frameworks
+                    </h3>
+                    <div class="skill-badges">
+                        <div class="skill-badge">
+                            <div class="skill-badge-icon" style="--badge-color: #092E20;">
+                                <i class="ph ph-leaf"></i>
+                            </div>
+                            <span>Django</span>
+                        </div>
+                        <div class="skill-badge">
+                            <div class="skill-badge-icon" style="--badge-color: #61DAFB;">
+                                <i class="ph ph-atom"></i>
+                            </div>
+                            <span>ReactJS</span>
+                        </div>
+                        <div class="skill-badge">
+                            <div class="skill-badge-icon" style="--badge-color: #6DB33F;">
+                                <i class="ph ph-leaf"></i>
+                            </div>
+                            <span>Spring Boot</span>
+                        </div>
+                        <div class="skill-badge">
+                            <div class="skill-badge-icon" style="--badge-color: #06B6D4;">
+                                <i class="ph ph-paint-brush"></i>
+                            </div>
+                            <span>Tailwind CSS</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tools & Databases -->
+                <div class="skill-category">
+                    <h3 class="skill-category-title">
+                        <i class="ph ph-wrench"></i> Tools &amp; Database
+                    </h3>
+                    <div class="skill-badges">
+                        <div class="skill-badge">
+                            <div class="skill-badge-icon" style="--badge-color: #F05032;">
+                                <i class="ph ph-git-branch"></i>
+                            </div>
+                            <span>Git</span>
+                        </div>
+                        <div class="skill-badge">
+                            <div class="skill-badge-icon" style="--badge-color: #2496ED;">
+                                <i class="ph ph-package"></i>
+                            </div>
+                            <span>Docker</span>
+                        </div>
+                        <div class="skill-badge">
+                            <div class="skill-badge-icon" style="--badge-color: #336791;">
+                                <i class="ph ph-database"></i>
+                            </div>
+                            <span>PostgreSQL</span>
+                        </div>
+                        <div class="skill-badge">
+                            <div class="skill-badge-icon" style="--badge-color: #47A248;">
+                                <i class="ph ph-database"></i>
+                            </div>
+                            <span>MongoDB</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- AI Integration -->
+                <div class="skill-category">
+                    <h3 class="skill-category-title">
+                        <i class="ph ph-brain"></i> AI / LLMs
+                    </h3>
+                    <div class="skill-badges">
+                        <div class="skill-badge">
+                            <div class="skill-badge-icon" style="--badge-color: #10A37F;">
+                                <i class="ph ph-robot"></i>
+                            </div>
+                            <span>OpenAI API</span>
+                        </div>
+                        <div class="skill-badge">
+                            <div class="skill-badge-icon" style="--badge-color: #4285F4;">
+                                <i class="ph ph-sparkle"></i>
+                            </div>
+                            <span>Gemini API</span>
+                        </div>
+                        <div class="skill-badge">
+                            <div class="skill-badge-icon" style="--badge-color: #9B59B6;">
+                                <i class="ph ph-chat-centered-dots"></i>
+                            </div>
+                            <span>Prompt Engineering</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== PROJECTS SECTION ==================== -->
+    <section id="projects" class="section projects">
+        <div class="container">
+            <div class="section-header fade-in">
+                <span class="section-tag">&lt;Projects /&gt;</span>
+                <h2 class="section-title">Dự án nổi bật</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="projects-grid">
+                <!-- Project 1: Hutech ProGame -->
+                <div class="project-card fade-in" id="project-progame">
+                    <div class="project-card-glow"></div>
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <i class="ph ph-trophy"></i>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link-icon" title="GitHub" aria-label="GitHub">
+                                <i class="ph ph-github-logo"></i>
+                            </a>
+                            <a href="#" class="project-link-icon" title="Live Demo" aria-label="Live Demo">
+                                <i class="ph ph-arrow-square-out"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <h3 class="project-title">Hutech ProGame</h3>
+                    <p class="project-subtitle">Competitive Programming Platform</p>
+                    <p class="project-description">
+                        Hệ thống quản lý và tổ chức thi đấu lập trình bằng Django. Tích hợp bộ chấm bài (Judge)
+                        tự động, quản lý bảng xếp hạng thời gian thực và hệ thống submission hoàn chỉnh.
+                    </p>
+                    <div class="project-highlights">
+                        <div class="highlight-item">
+                            <i class="ph ph-check-circle"></i>
+                            <span>Quản lý logic phức tạp</span>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="ph ph-check-circle"></i>
+                            <span>Xử lý dữ liệu thời gian thực</span>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="ph ph-check-circle"></i>
+                            <span>Auto Judge System</span>
+                        </div>
+                    </div>
+                    <div class="project-tech">
+                        <span class="tech-tag">Django</span>
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">PostgreSQL</span>
+                        <span class="tech-tag">WebSocket</span>
+                        <span class="tech-tag">Docker</span>
+                    </div>
+                </div>
+
+                <!-- Project 2: SmartQuiz AI -->
+                <div class="project-card fade-in" id="project-smartquiz">
+                    <div class="project-card-glow"></div>
+                    <div class="project-header">
+                        <div class="project-icon project-icon-ai">
+                            <i class="ph ph-brain"></i>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link-icon" title="GitHub" aria-label="GitHub">
+                                <i class="ph ph-github-logo"></i>
+                            </a>
+                            <a href="#" class="project-link-icon" title="Live Demo" aria-label="Live Demo">
+                                <i class="ph ph-arrow-square-out"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <h3 class="project-title">SmartQuiz AI</h3>
+                    <p class="project-subtitle">AI-Powered Quiz Generator</p>
+                    <p class="project-description">
+                        Web app tạo đề thi thông minh từ văn bản bằng ReactJS &amp; Gemini API. Hỗ trợ upload
+                        file PDF/Docx, phân tích nội dung và tự động generate câu hỏi trắc nghiệm chất lượng cao.
+                    </p>
+                    <div class="project-highlights">
+                        <div class="highlight-item">
+                            <i class="ph ph-check-circle"></i>
+                            <span>Giao diện hiện đại UX tối ưu</span>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="ph ph-check-circle"></i>
+                            <span>Tích hợp LLMs (Gemini)</span>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="ph ph-check-circle"></i>
+                            <span>Hỗ trợ PDF/Docx extraction</span>
+                        </div>
+                    </div>
+                    <div class="project-tech">
+                        <span class="tech-tag">React</span>
+                        <span class="tech-tag">Spring Boot</span>
+                        <span class="tech-tag">MongoDB</span>
+                        <span class="tech-tag">Gemini API</span>
+                        <span class="tech-tag">Tailwind</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== CONTACT SECTION ==================== -->
+    <section id="contact" class="section contact">
+        <div class="container">
+            <div class="section-header fade-in">
+                <span class="section-tag">&lt;Contact /&gt;</span>
+                <h2 class="section-title">Liên hệ</h2>
+                <div class="section-line"></div>
+                <p class="section-subtitle">
+                    Bạn có dự án thú vị? Hãy kết nối với tôi!
+                </p>
+            </div>
+            <div class="contact-grid fade-in">
+                <div class="contact-info">
+                    <div class="contact-card">
+                        <div class="contact-card-icon">
+                            <i class="ph ph-envelope-simple"></i>
+                        </div>
+                        <div>
+                            <h4>Email</h4>
+                            <a href="mailto:tanbuilh@gmail.com">tanbuilh@gmail.com</a>
+                        </div>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-card-icon">
+                            <i class="ph ph-github-logo"></i>
+                        </div>
+                        <div>
+                            <h4>GitHub</h4>
+                            <a href="https://github.com/TanBuiDev" target="_blank" rel="noopener">github.com/TanBuiDev</a>
+                        </div>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-card-icon">
+                            <i class="ph ph-linkedin-logo"></i>
+                        </div>
+                        <div>
+                            <h4>LinkedIn</h4>
+                            <a href="https://linkedin.com/in/tanbuilh" target="_blank" rel="noopener">linkedin.com/in/tanbuilh</a>
+                        </div>
+                    </div>
+                    <div class="contact-socials">
+                        <a href="https://github.com/TanBuiDev" class="social-btn" target="_blank" rel="noopener" aria-label="GitHub">
+                            <i class="ph ph-github-logo"></i>
+                        </a>
+                        <a href="https://linkedin.com/in/tanbuilh" class="social-btn" target="_blank" rel="noopener" aria-label="LinkedIn">
+                            <i class="ph ph-linkedin-logo"></i>
+                        </a>
+                        <a href="mailto:tanbuilh@gmail.com" class="social-btn" aria-label="Email">
+                            <i class="ph ph-envelope-simple"></i>
+                        </a>
+                    </div>
+                </div>
+                <form class="contact-form" id="contactForm" onsubmit="return handleSubmit(event)">
+                    <div class="form-group">
+                        <label for="name">Tên của bạn</label>
+                        <input type="text" id="name" name="name" placeholder="Nguyễn Văn A" required="required"/>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="email@example.com" required="required"/>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Tin nhắn</label>
+                        <textarea id="message" name="message" rows="5" placeholder="Nội dung tin nhắn..." required="required"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-full">
+                        <i class="ph ph-paper-plane-tilt"></i>
+                        Gửi tin nhắn
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <a href="#hero" class="footer-logo">
+                    <span class="logo-bracket">&lt;</span>Tấn<span class="logo-dot">.</span>Dev<span class="logo-bracket">/&gt;</span>
+                </a>
+                <p class="footer-text">Designed &amp; Built by Bùi Lê Hoàng Tấn &copy; 2025</p>
+                <p class="footer-tech">Powered by Spring Boot + Thymeleaf</p>
+            </div>
+        </div>
+    </footer>
+
+    <script th:src="@{/js/main.js}"></script>
+</body>
+</html>
