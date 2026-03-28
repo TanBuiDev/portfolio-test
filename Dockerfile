@@ -12,7 +12,7 @@ COPY src ./src
 
 RUN ./mvnw package -DskipTests -B
 
-FROM eclipse-temurin:21-jre
+FROM eclipse-temurin:21-jre-alpine
 
 WORKDIR /app
 
